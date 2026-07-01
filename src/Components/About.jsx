@@ -1,27 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, Layout, Bolt, Users, Palette,Rocket} from "lucide-react";
+import { Code2, Layout, Bolt, Users, Palette, Rocket } from "lucide-react";
 const features = [
   {
     icon: Code2,
     title: "Clean & Scalable Code",
-    description: "Writing maintainable and reusable React components with TypeScript and modern best practices."
+    description:
+      "Writing maintainable and reusable React components with TypeScript and modern best practices.",
   },
   {
     icon: Layout,
     title: "UI/UX Design",
-    description: "Building responsive, intuitive, and visually appealing interfaces using React and Tailwind CSS."
+    description:
+      "Building responsive, intuitive, and visually appealing interfaces using React and Tailwind CSS.",
   },
   {
     icon: Bolt,
     title: "High Performance",
-    description: "Optimizing React apps for speed, efficiency, and seamless user experience."
+    description:
+      "Optimizing React apps for speed, efficiency, and seamless user experience.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Working closely with designers, backend developers, and teams to deliver robust web applications."
-  }
+    description:
+      "Working closely with designers, backend developers, and teams to deliver robust web applications.",
+  },
 ];
 import images from "../assets/images";
 
@@ -30,34 +34,37 @@ const About = () => {
     {
       icon: Code2,
       title: "Clean Code",
-      description: "Writing maintainable, scalable, and well-documented code"
+      description: "Writing maintainable, scalable, and well-documented code",
     },
     {
       icon: Palette,
       title: "UI/UX Design",
-      description: "Creating beautiful and intuitive user interfaces"
+      description: "Creating beautiful and intuitive user interfaces",
     },
     {
       icon: Rocket,
       title: "Performance",
-      description: "Optimizing applications for speed and efficiency"
+      description: "Optimizing applications for speed and efficiency",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "Working effectively with cross-functional teams"
-    }
+      description: "Working effectively with cross-functional teams",
+    },
   ];
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/rupin-cv.pdf";
+    link.href = "/assets/resume-rupin.pdf";
     link.download = "rupinCv.pdf";
     link.click();
-  }
+  };
 
   return (
-    <section id="about" className="section-padding px-4 md:px-16 bg-[hsl(var(--section-bg))]">
+    <section
+      id="about"
+      className="section-padding px-4 md:px-16 bg-[hsl(var(--section-bg))]"
+    >
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,7 +77,10 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate frontend developer dedicated to crafting responsive, user-friendly, and visually engaging web experiences. I focus on writing clean, maintainable code and bringing designs to life with modern technologies.
+            I'm a passionate frontend developer dedicated to crafting
+            responsive, user-friendly, and visually engaging web experiences. I
+            focus on writing clean, maintainable code and bringing designs to
+            life with modern technologies.
           </p>
         </motion.div>
 
@@ -103,16 +113,19 @@ const About = () => {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Frontend Developer & Creative Problem Solver</h3>
+              <h3 className="text-2xl font-semibold">
+                Frontend Developer & Creative Problem Solver
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                As a frontend developer, I focus on creating seamless, user-friendly
-                interfaces with React, JavaScript, and modern web technologies. My goal is
-                to craft digital experiences that are not only functional but also visually
-                engaging.
+                As a frontend developer, I focus on creating seamless,
+                user-friendly interfaces with React, JavaScript, and modern web
+                technologies. My goal is to craft digital experiences that are
+                not only functional but also visually engaging.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When I’m away from the screen, I enjoy learning new technologies, building
-                side projects, and sharing my journey with the developer community.
+                When I’m away from the screen, I enjoy learning new
+                technologies, building side projects, and sharing my journey
+                with the developer community.
               </p>
             </div>
 
@@ -128,7 +141,9 @@ const About = () => {
                 >
                   <feature.icon className="w-8 h-8 text-primary mb-2" />
                   <h4 className="font-semibold mb-1">{feature.title}</h4>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {feature.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -140,9 +155,12 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="pt-6"
             >
-              <button className="hero-button px-6 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
+              <button
+                className="hero-button px-6 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
                    text-white font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-xl 
-                   transition-transform duration-300 ease-in-out " onClick={handleDownload}>
+                   transition-transform duration-300 ease-in-out "
+                onClick={handleDownload}
+              >
                 Download Resume
               </button>
             </motion.div>

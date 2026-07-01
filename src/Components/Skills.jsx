@@ -1,28 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  SiReact, 
-  SiTypescript, 
-  SiJavascript, 
-  SiTailwindcss, 
-  SiNodedotjs, 
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiNodedotjs,
   SiGit,
   SiFigma,
   SiNextdotjs,
   SiPython,
-  
 } from "react-icons/si";
 
 const Skills = () => {
   const skills = [
+    { name: "Next.js", icon: SiNextdotjs, color: "#61DAFD", level: 75 },
     { name: "React", icon: SiReact, color: "#61DAFB", level: 75 },
-    { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 20 },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 70 },
     { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 70 },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 90 },
+    { name: "Framer Motion", icon: SiFigma, color: "#06B6F4", level: 90 },
     // { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 85 },
     // { name: "Node.js", icon: SiNodedotjs, color: "#339933", level: 80 },
     { name: "Git", icon: SiGit, color: "#F05032", level: 75 },
-    { name: "Python", icon: SiPython, color: "#F24E1E", level: 60 }
+    { name: "Python", icon: SiPython, color: "#F24E1E", level: 60 },
   ];
 
   return (
@@ -56,16 +57,16 @@ const Skills = () => {
             >
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="relative">
-                  <skill.icon 
-                    className="w-12 h-12 transition-transform duration-300 group-hover:scale-110" 
+                  <skill.icon
+                    className="w-12 h-12 transition-transform duration-300 group-hover:scale-110"
                     style={{ color: skill.color }}
                   />
                   <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                
+
                 <div className="space-y-2 w-full">
                   <h3 className="font-semibold text-lg">{skill.name}</h3>
-                  
+
                   {/* Progress Bar */}
                   <div className="w-full bg-secondary rounded-full h-2">
                     <motion.div
@@ -76,7 +77,7 @@ const Skills = () => {
                       className="h-2 bg-gradient-to-r from-primary to-accent rounded-full"
                     />
                   </div>
-                  
+
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-muted-foreground">Proficiency</span>
                     <span className="font-medium">{skill.level}%</span>
@@ -98,8 +99,13 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold mb-6">Other Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Redux-Toolkit",  
-              "JWT", "Shadcn", "OriginUI", "HyperUI", "Rest Api", "Framer-motion"
+              "Redux-Toolkit",
+              "JWT",
+              "Shadcn",
+              "OriginUI",
+              "HyperUI",
+              "Rest Api",
+              "Framer-motion",
             ].map((tech, index) => (
               <motion.span
                 key={tech}

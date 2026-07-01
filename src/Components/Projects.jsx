@@ -5,50 +5,89 @@ import images from "../assets/images";
 const Projects = () => {
   const projects = [
     {
-      title: "Job Portal(Jobko)",
-      description: "Developed a production-ready job portal adapted from the Jobko PWA HTML template, optimized for mobile-1st design",
-      image: images.jobko,
-      tech: ["React", "JavaScript", "Tailwind CSS", "Framer-motion", "Rest Api", "Jwt tokens"],
-      github: "https://github.com/rupinmhj/Job-portal",
-      live: "https://rupinjobportal.netlify.app/",
-      featured: true
+      title: "Workofile",
+      description:
+        "Developed a production-ready job portal application using React, Tailwind CSS, and Framer Motion. Implemented features such as user authentication, job posting, and real-time messaging and notifications using WebSockets.",
+      image: images.workofile,
+      tech: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Framer-motion",
+        "Rest Api",
+        "Jwt tokens",
+        "Web Sockets",
+        "Shadcn UI",
+      ],
+      // github: "https://github.com/rupinmhj/Job-portal",
+      live: "https://workofile.com/",
+      featured: true,
     },
     {
-      title: "E commerce application",
-      description: "Shofy, a front-end e-commerce app using React and framer-motion, mainly to practice state management and UI design",
-      image: images.shofy,
-      tech: ["React", "Tailwind CSS", "Framer-motion"],
-      github: "https://github.com/rupinmhj/shofy-E-commerce",
-      live: "https://shofyrupin2.netlify.app/",
-      featured: true
+      title: "Workohub",
+      description:
+        "Focuses on responsive, high-performance UI ensures that Workohub's multi-step freelancer verification and profile transfer flows remain fast and intuitive across all devices",
+      image: images.workohub,
+      tech: [
+        "Nextjs",
+        "Tailwind CSS",
+        "Rest Api",
+        "Web Sockets",
+        "Mantine UI",
+        "zod",
+      ],
+      live: "https://workohub.com/",
+      // github: "https://shofyrupin2.netlify.app/",
+      featured: true,
+    },
+    {
+      title: "Restro Square",
+      description:
+        "Implemented menu scanning, cart management, and order flow features, ensuring a seamless dining experience for users. The application is built with Next.js and Tailwind CSS, providing a responsive and visually appealing interface.",
+      image: images.restro,
+      tech: [
+        "Nextjs",
+        "Tailwind CSS",
+        "Rest Api",
+        "Web Sockets",
+        "Ant Design UI",
+        "zod",
+      ],
+      live: "https://restrosquare.com/",
+      // github: "https://shofyrupin2.netlify.app/",
+      featured: true,
     },
 
     {
       title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing projects and skills with smooth animations and modern design.",
+      description:
+        "A responsive portfolio website showcasing projects and skills with smooth animations and modern design.",
       image: images.portfolio,
       tech: ["React", "Framer Motion", "Tailwind CSS"],
       github: "https://github.com",
       live: "https://demo.com",
-      featured: false
+      featured: false,
     },
     {
       title: "Paste App",
-      description: "A Paste App using React and Redux Toolkit to practice state management in real-world scenarios. The app allows users to create, edit, copy, and delete text snippets (pastes), similar to a lightweight notepad.",
+      description:
+        "A Paste App using React and Redux Toolkit to practice state management in real-world scenarios. The app allows users to create, edit, copy, and delete text snippets (pastes), similar to a lightweight notepad.",
       image: images.paste,
       tech: ["React", "Node.js", "Socket.io", "MongoDB"],
       github: "https://github.com/rupinmhj/Job-portal",
       live: "https://era-paste-app.netlify.app/",
-      featured: false
+      featured: false,
     },
-
   ];
 
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
+  const featuredProjects = projects.filter((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="px-4 md:px-16 section-padding bg-[hsl(var(--section-bg))]">
+    <section
+      id="projects"
+      className="px-4 md:px-16 section-padding bg-[hsl(var(--section-bg))]"
+    >
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +100,8 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </motion.div>
 
@@ -74,10 +114,11 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''
-                }`}
+              className={`grid md:grid-cols-2 gap-8 items-center ${
+                index % 2 === 1 ? "md:grid-flow-col-dense" : ""
+              }`}
             >
-              <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+              <div className={`${index % 2 === 1 ? "md:col-start-2" : ""}`}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="project-card overflow-hidden"
@@ -90,9 +131,13 @@ const Projects = () => {
                 </motion.div>
               </div>
 
-              <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
+              <div
+                className={`space-y-6 ${index % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""}`}
+              >
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{project.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    {project.title}
+                  </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
                     {project.description}
                   </p>
@@ -110,7 +155,7 @@ const Projects = () => {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <motion.a
+                  {/* <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href={project.github}
@@ -120,7 +165,7 @@ const Projects = () => {
                   >
                     <Github className="w-5 h-5" />
                     <span>Code</span>
-                  </motion.a>
+                  </motion.a> */}
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -146,7 +191,9 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          <h3 className="text-3xl font-bold text-center mb-12">Other Notable Projects</h3>
+          <h3 className="text-3xl font-bold text-center mb-12">
+            Other Notable Projects
+          </h3>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-24">
