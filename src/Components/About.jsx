@@ -55,7 +55,7 @@ const About = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/resume-rupin.pdf";
+    link.href = "/resume-rupin-maharjan-final.pdf";
     link.download = "rupinCv.pdf";
     link.click();
   };
